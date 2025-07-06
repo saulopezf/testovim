@@ -4,6 +4,13 @@
 require "nvchad.mappings"
 
 local map = vim.keymap.set
+local delete_map = vim.keymap.del
+
+-- ╭─────────────────────────────────────────────────────────╮
+-- │             Mappings I want to delete/change            │
+-- ╰─────────────────────────────────────────────────────────╯
+pcall(delete_map, "n", "<leader>cm")
+pcall(delete_map, "n", "<leader>gt")
 
 -- ╭─────────────────────────────────────────────────────────╮
 -- │                   General Mappings                      │
@@ -44,6 +51,9 @@ map("n", "<leader>fr", tbuiltin.resume, {
     silent = true,
 })
 
+map("n", "<leader>gc", "<cmd>Telescope git_commits<CR>", { desc = "Git Commits" })
+map("n", "<leader>gs", "<cmd>Telescope git_status<CR>", { desc = "Git Status" })
+
 -- ╭─────────────────────────────────────────────────────────╮
 -- │                      Git (Gitsigns)                     │
 -- ╰─────────────────────────────────────────────────────────╯
@@ -79,3 +89,16 @@ map("n", "zK", function()
         vim.lsp.buf.hover()
     end
 end, { desc = "Peek fold or hover" })
+
+-- ╭─────────────────────────────────────────────────────────╮
+-- │                        Copilot                          │
+-- ╰─────────────────────────────────────────────────────────╯
+map("n", "<leader>ce", ":Copilot enable<CR>", { desc = "Enable Copilot" })
+map("n", "<leader>cd", ":Copilot disable<CR>", { desc = "Disable Copilot" })
+map("i", "<C-Q>", 'copilot#Accept("")', {
+    desc = "Accept Copilot suggestion",
+    expr = true,
+    silent = true,
+    script = true,
+    noremap = true,
+})
