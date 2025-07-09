@@ -22,6 +22,7 @@ return {
             "bash",
             "markdown",
             "yaml",
+            "tsx",
         },
     },
 }
