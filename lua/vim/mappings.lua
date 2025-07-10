@@ -33,6 +33,9 @@ map("n", "<C-Right>", ":vertical resize +2<CR>", { desc = "Resize window right" 
 map("n", "<C-Up>", ":resize -2<CR>", { desc = "Resize window up" })
 map("n", "<C-Down>", ":resize +2<CR>", { desc = "Resize window down" })
 
+-- Paste without yanking
+map("v", "<C-p>", '"_dP', { desc = "Paste without yanking" })
+
 -- ╭─────────────────────────────────────────────────────────╮
 -- │                   Telescope Mappings                    │
 -- ╰─────────────────────────────────────────────────────────╯
@@ -95,10 +98,10 @@ end, { desc = "Peek fold or hover" })
 -- ╰─────────────────────────────────────────────────────────╯
 map("n", "<leader>ce", ":Copilot enable<CR>", { desc = "Enable Copilot" })
 map("n", "<leader>cd", ":Copilot disable<CR>", { desc = "Disable Copilot" })
-map("i", "<C-Q>", 'copilot#Accept("")', {
-    desc = "Accept Copilot suggestion",
+map("i", "<C-a>", 'copilot#Accept("<CR>")', {
     expr = true,
     silent = true,
     script = true,
-    noremap = true,
+    replace_keycodes = false, -- Important for proper key handling
+    desc = "Accept Copilot suggestion",
 })
