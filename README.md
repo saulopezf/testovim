@@ -35,6 +35,7 @@ Before running Neovim with this configuration, make sure you have the following 
 ## 📦 Installation
 
 1.  Clone this repo into the nvim config directory:
+
     UNIX based system
     ```bash
     $ git clone https://github.com/saulopezf/testovim.git ~/.config/nvim`
@@ -45,8 +46,27 @@ Before running Neovim with this configuration, make sure you have the following 
     ```
 
 2.  Launch Neovim and let Lazy install all plugins
-    In case of Lazy not installing plugins automatically launch `:Lazy` and install them with `^I`
+    - In case of Lazy not installing plugins automatically
+        ```
+        :Lazy install
+        ```
+    - In case of wanting the lock version
+        ```
+        :Lazy sync
+        ```
 
-3.  Launch `:MasonInstallAll` for LSPs, formatters, linters and DAPs to be installed.
+3.  For LSPs, formatters, linters and DAPs to be installed.
+    ```
+    :MasonInstallAll
+    ```
 
-4. You are ready to go! `:checkhealth` to ensure all the environment is running smoothly.
+4.  For parsers and color in your files
+    ```
+    :TSInstallAll
+    ```
+    - Treesitter `auto_install` is set to `false`. In case of a filetype or language not having a parser
+        ```
+        :TSInstall filetype
+        ```
+
+5. You are ready to go! `:checkhealth` to ensure all the environment is running smoothly.
