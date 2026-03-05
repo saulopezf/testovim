@@ -103,6 +103,30 @@ for _, language in ipairs(js_languages) do
             userDataDir = false,
         },
         {
+            type = "pwa-node",
+            request = "launch",
+            name = "Debug Jest current file",
+            runtimeExecutable = "npm",
+            runtimeArgs = {
+                "run",
+                "test",
+                "--",
+                "${file}",
+                "--runInBand",
+            },
+            cwd = vim.fn.getcwd(),
+            console = "integratedTerminal",
+            sourceMaps = true,
+            resolveSourceMapLocations = {
+                "${workspaceFolder}/**",
+                "!**/node_modules/**",
+            },
+            skipFiles = {
+                "<node_internals>/**",
+                "**/node_modules/**",
+            },
+        },
+        {
             -- Just a separator for launch.json configs
             name = "----- ↓ launch.json configs ↓ -----",
             type = "",

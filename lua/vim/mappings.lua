@@ -77,7 +77,9 @@ map("n", "<leader>do", dap.step_over, { desc = "DAP step over" })
 map("n", "<leader>di", dap.step_into, { desc = "DAP step into" })
 
 map("n", "<leader>dt", dapui.toggle, { desc = "DAP UI toggle" })
-map("n", "<leader>dk", dapui.eval, { desc = "DAP eval hover" })
+map("n", "<leader>dk", function()
+    require("dapui").eval(nil, { enter = true })
+end, { desc = "DAP eval hover" })
 
 -- ╭─────────────────────────────────────────────────────────╮
 -- │                    Folding (nvim-ufo)                   │
