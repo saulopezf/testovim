@@ -4,7 +4,7 @@
 -- ╰─────────────────────────────────────────────────────────╯
 
 -- List of LSP servers to configure manually
-local servers = { "html", "cssls", "ts_ls", "clangd" }
+local servers = { "html", "cssls", "ts_ls", "clangd", "gopls" }
 
 ---@type vim.lsp.Config
 local ts_config = {

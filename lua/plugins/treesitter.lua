@@ -5,6 +5,10 @@
 return {
     "nvim-treesitter/nvim-treesitter",
 
+    -- Fix para windows
+    branch = "master",
+    commit = nil,
+
     opts = {
         ensure_installed = {
             -- NvChad already installed languages
@@ -23,6 +27,7 @@ return {
             "markdown",
             "yaml",
             "tsx",
+            "go"
         },
     },
 }
