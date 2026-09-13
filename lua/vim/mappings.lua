@@ -58,6 +58,14 @@ map("n", "<leader>gc", "<cmd>Telescope git_commits<CR>", { desc = "Git Commits" 
 map("n", "<leader>gs", "<cmd>Telescope git_status<CR>", { desc = "Git Status" })
 
 -- ╭─────────────────────────────────────────────────────────╮
+-- │                       Find & Replace                    │
+-- ╰─────────────────────────────────────────────────────────╯
+local spectre = require "spectre"
+map("n", "<leader>s", function()
+    spectre.toggle()
+end, { desc = "Spectre toggle (Find & Replace)" })
+
+-- ╭─────────────────────────────────────────────────────────╮
 -- │                      Git (Gitsigns)                     │
 -- ╰─────────────────────────────────────────────────────────╯
 map("n", "<leader>gl", ":Gitsigns toggle_current_line_blame<CR>", {

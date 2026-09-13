@@ -1,3 +1,7 @@
+-- ╭─────────────────────────────────────────────────────────╮
+-- │         Extend telescope.nvim with live-grep-args       │
+-- ╰─────────────────────────────────────────────────────────╯
+
 return {
     {
         "nvim-telescope/telescope.nvim",
