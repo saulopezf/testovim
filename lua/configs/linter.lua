@@ -6,10 +6,10 @@ local lint = require "lint"
 
 -- Associate filetypes with linters
 lint.linters_by_ft = {
-    javascript = { "eslint_d" },
-    typescript = { "eslint_d" },
-    javascriptreact = { "eslint_d" },
-    typescriptreact = { "eslint_d" },
+    javascript = { "eslint_d", "oxlint" },
+    typescript = { "eslint_d", "oxlint" },
+    javascriptreact = { "eslint_d", "oxlint" },
+    typescriptreact = { "eslint_d", "oxlint" },
 }
 
 -- Auto-run linter on common editing events

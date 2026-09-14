@@ -4,46 +4,28 @@
 
 local conform = require "conform"
 
+-- Use prettier from the local project if available, otherwise fallback to oxfmt
+local function use_project_prettier(bufnr)
+    local cwd = vim.fn.getcwd()
+    local prettier_local = cwd .. "/node_modules/.bin/prettier"
+    if vim.fn.executable(prettier_local) == 1 then
+        return { "prettier" }
+    elseif conform.get_formatter_info("oxfmt", bufnr).available then
+        return { "oxfmt" }
+    else
+        return {}
+    end
+end
+
 conform.setup {
-    -- Define formatters per filetype
     formatters_by_ft = {
         lua = { "stylua" },
-
-        javascript = function(bufnr)
-            if conform.get_formatter_info("prettier", bufnr).available then
-                return { "prettier" }
-            else
-                return { "eslint_d" }
-            end
-        end,
-
-        typescript = function(bufnr)
-            if conform.get_formatter_info("prettier", bufnr).available then
-                return { "prettier" }
-            else
-                return { "eslint_d" }
-            end
-        end,
-
-        javascriptreact = function(bufnr)
-            if conform.get_formatter_info("prettier", bufnr).available then
-                return { "prettier" }
-            else
-                return { "eslint_d" }
-            end
-        end,
-
-        typescriptreact = function(bufnr)
-            if conform.get_formatter_info("prettier", bufnr).available then
-                return { "prettier" }
-            else
-                return { "eslint_d" }
-            end
-        end,
-
-        css = { "prettier" },
-        html = { "prettier" },
-        -- Add more filetypes as needed
+        javascript = use_project_prettier,
+        typescript = use_project_prettier,
+        javascriptreact = use_project_prettier,
+        typescriptreact = use_project_prettier,
+        css = use_project_prettier,
+        html = use_project_prettier,
     },
 
     -- Format on save with LSP fallback
