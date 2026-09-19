@@ -1,6 +1,6 @@
 # testovim
 
-This is my custom Neovim setup built on top of [NvChad](https://github.com/NvChad/NvChad), tailored for full-stack web development — especially for JavaScript, TypeScript, and Node.js — and also supports C/C++ development and debugging.
+This is my custom Neovim setup built on top of [NvChad](https://github.com/NvChad/NvChad), tailored for full-stack web development — featuring environment for JavaScript, TypeScript, Golang and C/C++ with debugging.
 
 ---
 
