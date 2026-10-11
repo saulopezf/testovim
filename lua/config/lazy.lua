@@ -27,6 +27,7 @@ require("lazy").setup {
 
         -- LazyVim extras (declared here instead of lazyvim.json)
         { import = "lazyvim.plugins.extras.editor.telescope" },
+        { import = "lazyvim.plugins.extras.editor.neo-tree" },
         { import = "lazyvim.plugins.extras.ai.copilot" },
         { import = "lazyvim.plugins.extras.dap.core" },
         { import = "lazyvim.plugins.extras.lang.typescript" },

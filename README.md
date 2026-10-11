@@ -31,7 +31,7 @@ Before running Neovim with this configuration, make sure you have the following 
 #### System
 - **Neovim ≥ 0.11.2**
 - **git**, a **C compiler** and **tree-sitter-cli** — for treesitter parsers
-- **ripgrep** (`rg`) and **fd** — for Telescope
+- **ripgrep** (`rg`) — for Telescope
 - **node** — for LSPs, Copilot and the JS debugger
 - **go** — for gopls, gofumpt, goimports and delve
 
@@ -89,11 +89,19 @@ On top of the [LazyVim defaults](https://www.lazyvim.org/keymaps):
 |---|---|
 | `;` | Enter command mode |
 | `<A-Up>` / `<A-Down>` | Move line up / down |
-| `<C-Arrows>` | Resize window |
+| `<C-Arrows>` / `<A-S-Arrows>` | Resize window (see macOS note below) |
+| `<C-n>` / `<leader>e` | Toggle file explorer (neo-tree) |
 | `<C-p>` (visual) | Paste without yanking |
+| `<leader>fr` | Telescope resume last search |
+| `<leader>fo` | Telescope recent files |
+| `<leader>fw` | Telescope live grep |
 | `<leader>fq` | Telescope live grep args |
+| `<leader>fz` | Telescope fuzzy find in current buffer |
+| `<leader>fh` | Telescope help pages |
+| `<leader>fa` | Telescope find all files (hidden + ignored) |
 | `<leader>fd` | Telescope diagnostics |
-| `<leader>sR` | Telescope resume last search |
+| `<leader>ma` | Telescope marks |
+| `<leader>fm` | Format file |
 | `<leader>sr` | Find & Replace (grug-far) |
 | `<leader>cL` | Run linter |
 | `<leader>ghl` | Toggle git line blame |
@@ -102,6 +110,8 @@ On top of the [LazyVim defaults](https://www.lazyvim.org/keymaps):
 | `<leader>do` / `<leader>dO` | DAP step over / step out |
 | `<leader>du` / `<leader>de` | DAP UI toggle / eval |
 | `zR` / `zM` / `zK` | Open all folds / close all folds / peek fold or hover |
+
+> **macOS:** `<C-Arrows>` are captured by Mission Control. Disable them in *System Settings > Keyboard > Keyboard Shortcuts > Mission Control* or use `<A-S-Arrows>` (the terminal must send Option as Meta, e.g. iTerm2 *Use Option as Meta key*).
 
 
 ## 🔀 Switching between `lazyvim` and `nvchad` branches

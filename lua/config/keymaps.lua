@@ -21,6 +21,12 @@ map("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Resize window rig
 map("n", "<C-Up>", "<cmd>resize -2<cr>", { desc = "Resize window up" })
 map("n", "<C-Down>", "<cmd>resize +2<cr>", { desc = "Resize window down" })
 
+-- macOS uses <C-Arrows> for Mission Control, so <A-S-Arrows> as alternative
+map("n", "<A-S-Left>", "<cmd>vertical resize -2<cr>", { desc = "Resize window left" })
+map("n", "<A-S-Right>", "<cmd>vertical resize +2<cr>", { desc = "Resize window right" })
+map("n", "<A-S-Up>", "<cmd>resize -2<cr>", { desc = "Resize window up" })
+map("n", "<A-S-Down>", "<cmd>resize +2<cr>", { desc = "Resize window down" })
+
 -- Paste without yanking
 map("v", "<C-p>", '"_dP', { desc = "Paste without yanking" })
 
