@@ -1,7 +1,10 @@
 -- ╭─────────────────────────────────────────────────────────╮
--- │                Load NvChad Default Options              │
+-- │     Options loaded before lazy.nvim startup             │
+-- │  Defaults: lazyvim/config/options.lua (LazyVim repo)    │
 -- ╰─────────────────────────────────────────────────────────╯
-require "nvchad.options"
+
+-- Copilot as inline ghost text instead of a completion source
+vim.g.ai_cmp = false
 
 -- ╭─────────────────────────────────────────────────────────╮
 -- │                    Floating windows                     │
@@ -18,18 +21,9 @@ vim.opt.shiftwidth = 4 -- Size of an indent
 vim.opt.relativenumber = true -- Show relative line numbers
 
 -- ╭─────────────────────────────────────────────────────────╮
--- │                       Folding                           │
+-- │                Folding (handled by nvim-ufo)            │
 -- ╰─────────────────────────────────────────────────────────╯
 vim.opt.foldcolumn = "0" -- No fold column shown
 vim.opt.foldlevel = 99 -- Max fold depth (avoid hiding anything)
 vim.opt.foldlevelstart = 99 -- Start unfolded
 vim.opt.foldenable = true -- Enable code folding
-vim.opt.foldtext = "" -- Use default fold text rendering
-
--- To customize fold characters in status column (uncomment to enable):
--- vim.opt.fillchars = {
---   foldopen = "v",
---   foldclose = ">",
---   foldsep = " ",
---   fold = " "
--- }

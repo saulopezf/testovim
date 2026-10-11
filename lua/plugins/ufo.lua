@@ -1,5 +1,5 @@
 -- ╭────────────────────────────────────────────────────────────╮
--- │                     nvim-ufo config                        │
+-- │                    Folding Plugin (nvim-ufo)               │
 -- │        Enhance the folding showing the wrapped lines       │
 -- ╰────────────────────────────────────────────────────────────╯
 
@@ -36,9 +36,29 @@ local function handler(virtText, lnum, endLnum, width, truncate)
     return newVirtText
 end
 
-require("ufo").setup {
-    fold_virt_text_handler = handler,
-    provider_selector = function(bufnr, filetype, buftype)
-        return { "lsp", "indent" }
-    end,
+return {
+    "kevinhwang91/nvim-ufo",
+    dependencies = "kevinhwang91/promise-async",
+    event = "LazyFile",
+    opts = {
+        fold_virt_text_handler = handler,
+        provider_selector = function(bufnr, filetype, buftype)
+            return { "lsp", "indent" }
+        end,
+    },
+    -- stylua: ignore
+    keys = {
+        { "zR", function() require("ufo").openAllFolds() end, desc = "Open all folds" },
+        { "zM", function() require("ufo").closeAllFolds() end, desc = "Close all folds" },
+        {
+            "zK",
+            function()
+                local winid = require("ufo").peekFoldedLinesUnderCursor()
+                if not winid then
+                    vim.lsp.buf.hover()
+                end
+            end,
+            desc = "Peek fold or hover",
+        },
+    },
 }
