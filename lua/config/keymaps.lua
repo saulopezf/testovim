@@ -31,6 +31,13 @@ map("n", "<A-S-Down>", "<cmd>resize +2<cr>", { desc = "Resize window down" })
 map("v", "<C-p>", '"_dP', { desc = "Paste without yanking" })
 
 -- ╭─────────────────────────────────────────────────────────╮
+-- │                        Buffers                          │
+-- ╰─────────────────────────────────────────────────────────╯
+-- Same as NvChad tabufline (<S-h>/<S-l> from LazyVim still work)
+map("n", "<Tab>", "<cmd>BufferLineCycleNext<cr>", { desc = "Next Buffer" })
+map("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<cr>", { desc = "Prev Buffer" })
+
+-- ╭─────────────────────────────────────────────────────────╮
 -- │                      Git (Gitsigns)                     │
 -- ╰─────────────────────────────────────────────────────────╯
 map("n", "<leader>ghl", "<cmd>Gitsigns toggle_current_line_blame<cr>", { desc = "Toggle Line Blame" })
