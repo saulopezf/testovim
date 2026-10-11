@@ -2,6 +2,8 @@
 
 This is my custom Neovim setup built on top of [NvChad](https://github.com/NvChad/NvChad), tailored for full-stack web development — featuring environment for JavaScript, TypeScript, Golang and C/C++ with debugging.
 
+> This is the `nvchad` branch. A migrated version with the same features on top of [LazyVim](https://github.com/LazyVim/LazyVim) lives in the `lazyvim` branch.
+
 ---
 
 ## ✨ Features
@@ -38,11 +40,11 @@ Before running Neovim with this configuration, make sure you have the following 
 
     UNIX based system
     ```bash
-    $ git clone https://github.com/saulopezf/testovim.git ~/.config/nvim`
+    $ git clone -b nvchad https://github.com/saulopezf/testovim.git ~/.config/nvim
     ```
     WINDOWS
     ```bash
-    $ git clone https://github.com/saulopezf/testovim.git ~/AppData/Local/nvim`
+    $ git clone -b nvchad https://github.com/saulopezf/testovim.git ~/AppData/Local/nvim
     ```
 
 2.  Launch Neovim and let Lazy install all plugins
