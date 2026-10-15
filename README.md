@@ -90,7 +90,8 @@ On top of the [LazyVim defaults](https://www.lazyvim.org/keymaps):
 | `;` | Enter command mode |
 | `<A-Up>` / `<A-Down>` | Move line up / down |
 | `<C-Arrows>` / `<A-S-Arrows>` | Resize window (see macOS note below) |
-| `<C-n>` / `<leader>e` | Toggle file explorer (neo-tree) |
+| `<C-n>` | Toggle file explorer (neo-tree) |
+| `<leader>e` | Open and focus file explorer (neo-tree) |
 | `<Tab>` / `<S-Tab>` | Next / previous buffer |
 | `<C-p>` (visual) | Paste without yanking |
 | `<leader>fr` | Telescope resume last search |

@@ -12,6 +12,14 @@ return {
             end,
             desc = "Explorer NeoTree (Root Dir)",
         },
+        {
+            "<leader>e",
+            function()
+                -- Open and jump to the explorer, never close it (use <C-n> to toggle)
+                require("neo-tree.command").execute { action = "focus", dir = LazyVim.root() }
+            end,
+            desc = "Focus Explorer NeoTree (Root Dir)",
+        },
     },
     opts = {
         window = {
