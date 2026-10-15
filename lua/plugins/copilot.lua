@@ -19,6 +19,10 @@ return {
                 text = false, -- Disable for plain text files
                 help = false, -- Disable in help buffers
             },
+            logger = {
+                -- Hide "not authenticated" errors while signed out (still written to the log file)
+                print_log_level = vim.log.levels.OFF,
+            },
         },
         keys = {
             { "<leader>a", "", desc = "+ai" },

@@ -1,13 +1,16 @@
 -- ╭─────────────────────────────────────────────────────────╮
--- │                 Colorscheme (neovim-ayu)                │
+-- │                 Colorscheme (kanagawa)                  │
 -- ╰─────────────────────────────────────────────────────────╯
 
 return {
-    { "Shatur/neovim-ayu", lazy = true },
+    { "rebelot/kanagawa.nvim", lazy = true },
+    -- Themes bundled with LazyVim core, not used
+    { "folke/tokyonight.nvim", enabled = false },
+    { "catppuccin/nvim", name = "catppuccin", enabled = false },
     {
         "LazyVim/LazyVim",
         opts = {
-            colorscheme = "ayu-dark",
+            colorscheme = "kanagawa",
         },
     },
 }

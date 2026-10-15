@@ -42,7 +42,7 @@ require("lazy").setup {
         lazy = false,
         version = false, -- always use the latest git commit
     },
-    install = { colorscheme = { "ayu-dark", "tokyonight" } },
+    install = { colorscheme = { "kanagawa", "habamax" } },
     checker = { enabled = true, notify = false },
     ui = {
         icons = {
