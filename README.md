@@ -2,7 +2,7 @@
 
 This is my custom Neovim setup built on top of [LazyVim](https://github.com/LazyVim/LazyVim), tailored for full-stack web development — featuring environment for JavaScript, TypeScript, Golang and C/C++ with debugging.
 
-> This is the `lazyvim` branch. The previous setup based on [NvChad](https://github.com/NvChad/NvChad) lives in the `nvchad` branch.
+> The previous setup based on [NvChad](https://github.com/NvChad/NvChad) lives in the `nvchad` branch.
 
 ---
 
@@ -42,15 +42,15 @@ Before running Neovim with this configuration, make sure you have the following 
 
 ## 📦 Installation
 
-1.  Clone the `lazyvim` branch into the nvim config directory:
+1.  Clone the repo into the nvim config directory:
 
     UNIX based system
     ```bash
-    $ git clone -b lazyvim https://github.com/saulopezf/testovim.git ~/.config/nvim
+    $ git clone https://github.com/saulopezf/testovim.git ~/.config/nvim
     ```
     WINDOWS
     ```bash
-    $ git clone -b lazyvim https://github.com/saulopezf/testovim.git ~/AppData/Local/nvim
+    $ git clone https://github.com/saulopezf/testovim.git ~/AppData/Local/nvim
     ```
 
 2.  Launch Neovim. LazyVim installs all plugins, LSPs, formatters, linters, DAPs (Mason) and treesitter parsers automatically.
@@ -115,7 +115,7 @@ On top of the [LazyVim defaults](https://www.lazyvim.org/keymaps):
 > **macOS:** `<C-Arrows>` are captured by Mission Control. Disable them in *System Settings > Keyboard > Keyboard Shortcuts > Mission Control* or use `<A-S-Arrows>` (the terminal must send Option as Meta, e.g. iTerm2 *Use Option as Meta key*).
 
 
-## 🔀 Switching between `lazyvim` and `nvchad` branches
+## 🔀 Switching between `main` (LazyVim) and `nvchad` branches
 
 Plugins, Mason packages and caches live outside the config directory, so clean them when switching branches:
 
