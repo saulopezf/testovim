@@ -2,7 +2,7 @@
 
 This is my custom Neovim setup built on top of [NvChad](https://github.com/NvChad/NvChad), tailored for full-stack web development — featuring environment for JavaScript, TypeScript, Golang and C/C++ with debugging.
 
-> This is the `nvchad` branch. A migrated version with the same features on top of [LazyVim](https://github.com/LazyVim/LazyVim) lives in the `lazyvim` branch.
+> This is the `nvchad` branch. A migrated version with the same features on top of [LazyVim](https://github.com/LazyVim/LazyVim) lives in the `main` branch.
 
 ---
 
